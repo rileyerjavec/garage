@@ -1,0 +1,101 @@
+# EVENTS
+- description: Entered the garage
+  category: Reclaiming the garage
+  check: MatchCommandFragment
+  options:
+    fragment: "null"
+    count: 0
+    exact: true
+    command: jq .garage .flags
+# ITEMS <-- TODO: write flags for object locations
+- description: The Groomba cleaned up the garage and removed all .junk files
+  category: Reclaiming the garage
+  check: CountCommandOutput
+  options:
+    count: 0
+    command: $(ls -l workshop | grep ".junk")
+- description: The Groomba functions, even if not cleaning the room
+  category: RoboVac Repair
+  check: ExecuteCommand
+  options:
+    command: python workshop/RoboVac.py < .robot_test
+# PROGRAMMING
+- KeypadCracker.py:
+  - description: No TODO markers in KeypadCracker.py
+    category: Code Crackin'
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- KeypadCracker.py:
+  - description: KeypadCracker.py Uses input to collect user data
+    category: Code Crackin'
+    check: MatchFileFragment
+    options: 
+      fragment: "input("
+      count: 1
+- KeypadCracker.py:
+  - description: KeypadCracker.py converts strings to integers using the built-in function
+    category: Code Crackin'
+    check: MatchFileFragment
+    options:
+      fragment: " int("
+      count: 1
+- KeypadCracker.py:
+  - description: KeypadCracker.py performs multiplication
+    category: Code Crackin'
+    check: MatchFileFragment
+    options:
+      fragment: " * "
+      count: 1
+- KeypadCracker.py:
+  - description: KeypadCracker.py performs subtraction
+    category: Code Crackin'
+    check: MatchFileFragment
+    options:
+      fragment: " - "
+      count: 1
+- KeypadCracker.py:
+  - description: KeypadCracker.py performs addition
+    category: Code Crackin'
+    check: MatchFileFragment
+    options:
+      fragment: " + "
+      count: 1
+- KeypadCracker.py:
+  - description: KeypadCracker.py performs division
+    category: Code Crackin'
+    check: MatchFileRegex
+    options:
+      regex: '\s\/(\/)?\s'
+      count: 1
+- workshop/RoboVac.py:
+  - description: No TODO markers in RoboVac.py
+    category: RoboVac Repair
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- workshop/RoboVac.py:
+  - description: RoboVac.py collects user input
+    category: RoboVac Repair
+    check: MatchFileFragment
+    options:
+      fragment: "input("
+      count: 1
+- workshop/RoboVac.py:
+  - description: RoboVac.py performs multiplication
+    category: RoboVac Repair
+    check: MatchFileFragment
+    options:
+      fragment: " * "
+      count: 1
+- workshop/RoboVac.py:
+  - description: RoboVac.py performs division
+    category: RoboVac Repair
+    check: MatchFileRegex
+    options:
+      regex: '\s\/(\/)?\s'
+      count: 1

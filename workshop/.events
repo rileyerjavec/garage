@@ -1,0 +1,20 @@
+junkify() {
+  if [[ "$(jq .junked ../.flags)" == null ]]; then
+    junks=()
+    while IFS= read -r line
+    do
+      junks+=("$line")
+    done < .junks
+    for junk in "${junks[@]}"
+    do
+      touch "$junk.junk"
+    done
+    python -c "from narrator import Checkpoint
+Checkpoint.set_flag('junked')"
+  fi
+}
+
+case "$(jq .keycode ../.flags)" in
+  1 ) junkify;;
+  * ) echo "ACCESS DENIED"; cd ..;;
+esac

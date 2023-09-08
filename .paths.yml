@@ -1,0 +1,39 @@
+###########
+# KEYPAD  #
+###########
+0:
+  0:
+    - As you key in each number, you experience a sudden aura of just being...right.
+    - The door to the garage opens with an uneven, yet rhythmically satisfying chug.
+1:
+  0:
+    - The keypad beeps and sounds quite like your awful printer. You feel a distinct
+    - kinship between your sinister toaster and this pernicious keypad device.
+    - It seems that the code you entered is incorrect.
+2:
+  0:
+    - Did you provide too many digits or no digitals at all? Recall, that you can use
+    - objects with short "arguments" after them (such as python Keypad.py ####)
+    - Only, like, use real numbers instead of "#"s.
+###########
+# GROOMBA #
+###########
+2:
+  0: 
+    - This place is a mess. But, what's that you spy in the corner? Looks like
+    - the last tenant left their "Groomba"™! Now, if you can only figure out
+    - how to work it.
+    - Might try to open it from the Explorer bar.
+3:
+  0:
+    - Now, that's a clean garage!
+4:
+  0: 
+    - Looks like it ran out of juice before cleaning the garage. Is the room
+    - size calculation incorrect?
+5:
+  0:
+    - Well, it's your garage...
+6:
+  0:
+    - The Groomba runs, but it appears that the robot stopped a bit early...

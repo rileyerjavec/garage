@@ -1,0 +1,14 @@
+if [[ "$(jq .garage .flags)" == null ]]; then
+  width=$(shuf -i 30-34 -n 1)
+  length=$(shuf -i 30-34 -n 1)
+  footage=$width*$length
+  ((battery=100-($footage*5)/60))
+  python -c "from narrator import Checkpoint
+Checkpoint.set_flag('garage', ${footage})
+Checkpoint.set_flag('garage_x', ${width})
+Checkpoint.set_flag('garage_y', ${length})
+Checkpoint.set_flag('battery', ${battery})
+Checkpoint.set_flag('code',2134)"
+  sed -i "s/WIDTH/$width/" README.md
+  sed -i "s/LENGTH/$length/" README.md
+fi
