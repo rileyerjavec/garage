@@ -56,6 +56,14 @@ When the number is correct, the `workshop` will open to you.
 
 You will notice that, when you enter the `workshop`, there's a lot of junk laying around. The Groomba™ will clean this up for you, though you'll need to, as written, fix it. There are two well-defined areas of the code to fix (they're marked with `TODO`s). Once these are fixed, you should be able to use the dimensions of your `garage` to clean the junk out.
 
+#### Non-required: Challenge beyond Basic Requirements (not graded)
+
+If you want a little extra challenge, beyond concepts covered so far in class, consider making the following change:
+
+- instead of getting measurements of the room from input prompts, generate them randomly.
+
+*Note:* This part of the assignment is not graded; if you decide to attempt this challenge, please ensure you see a green check appear first, indicating have completed all the graded checks.
+
 ## Accessing `garage` Content
 
 As before, we will `clone` our repositories. We can consider a `clone` as something that's part download, part direct link. It's a similar relationship between that of GitHub, `term-world`, and our `house`.
