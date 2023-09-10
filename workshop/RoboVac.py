@@ -15,29 +15,20 @@ class RoboVac(FixtureSpec):
     def battery_usage(self, room_x: int = 0, room_y: int = 0) -> int:
         """Calculate battery usage using room_x, room_y"""
         ###################################################
-        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
-
-        # TODO: Calculate square footage of the room
-
-        # TODO: Calculate the battery drain using a variable identifier
-        #       with the name of "drain" 
-
-        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
+        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
+        sqft = room_x * room_y
+        drain = (sqft * 5) // 60
+        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
         return drain
 
     def sense_room(self) -> (int, int):
         """Get measurements of the room from input prompts"""
         ###################################################
-        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
-
-        # TODO: Take user input of room width using variable idenitifer
-        #       "room_x"
-
-        # TODO: Take user input of room length using variable idenitifer
-        #       "room_y"
-
-        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
+        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
+        room_x = int(input("Enter room width: "))
+        room_y = int(input("Enter room length: "))
+        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
         return room_x, room_y
 
@@ -74,12 +65,12 @@ def main():
     # Ask if user wants to turn the Groomba on
     q = narrator.YesNoQuestion({
         "question":"Turn on the Groomba™",
-        "outcomes": [4, 5]
+        "outcomes": [{"act": 4, "scene": 0}, {"act": 5, "scene": 0}]
     })
   
     # If not, then...well, it's your garage
     n.path.change(q.ask())
-    if n.path.number == 5:
+    if n.path.act == 5:
         n.narrate()
         return
     
@@ -93,10 +84,10 @@ def main():
         robot.working = True
         robot.clean_room()
         set_flag('groombad', True)
-        n.path.change(3)
+        n.path.change({"act": 3, "scene": 0})
     
     if robot.battery > benchmark: 
-        n.path.change(6)
+        n.path.change({"act": 6, "scene": 0})
     
     # Print the remaining battery charge
     print(robot)
