@@ -1,7 +1,7 @@
 | Date              |          |
 |:------------------|:---------|
-| TODO | Assigned |
-| TODO    | Due      |
+| 11 September | Assigned |
+| 18 September    | Due      |
 | Status            | [![GatorGrader](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml) |
 
 # SECURITY SENSATION BITES BACK: SUPERLATIVELY SECURED GARAGES GALORE
@@ -54,19 +54,15 @@ When the number is correct, the `workshop` will open to you.
 
 ### `RoboVac.py`
 
-You'll notice that, when you enter the `workshop`, there's a lot of junk laying around. The Groomba™ will clean this up for you, though you'll need to, as written, fix it. There are two well-defined areas of the code to fix (they're marked with `TODO`s). Once these are fixed, you should be able to use the dimensions of your `garage` to clean the junk out.
-
-## Previous Learning Objectives
-
-If you wish to review previous learning objectives from our assignments, you can visit the [`Syllabus`](https://chompe.rs/100-syllabus) for helpful information. However, it's also important to make an effort to retain what we have covered thus far as we progress through the course sections of the `README` might be taken out.
+You will notice that, when you enter the `workshop`, there's a lot of junk laying around. The Groomba™ will clean this up for you, though you'll need to, as written, fix it. There are two well-defined areas of the code to fix (they're marked with `TODO`s). Once these are fixed, you should be able to use the dimensions of your `garage` to clean the junk out.
 
 ## Accessing `garage` Content
 
-This time around, we will `clone` our repositories. This is the way we'll interact with `git` and GitHub for the remainder of the semester. We can consider a `clone` as something that's part download, part direct link. It's a similar relationship between that of GitHub, `term-world`, and our `house`.
+As before, we will `clone` our repositories. We can consider a `clone` as something that's part download, part direct link. It's a similar relationship between that of GitHub, `term-world`, and our `house`.
 
 The process has two (2) major parts.
 
-### GitHub
+### 1. GitHub
 
 - On your GitHub assignment page (i.e. _this_ page) locate the green `Code` button
 - Select the `SSH` link from options presented
@@ -74,11 +70,13 @@ The process has two (2) major parts.
 
 ![TW - Clone link diagram](https://user-images.githubusercontent.com/1552764/213940345-2e62ec2e-e017-40ff-b325-745f9e731041.png)
 
-### `term-world`
+### 2. `term-world`
+
+As before, you can run the `git clone` command in the terminal followed by the copied link from above. Another way to `clone` a GitHub repository is to use the `term-world`/VSCode graphical interface as follows.
 
 ![TW - Clone Repo](https://user-images.githubusercontent.com/1552764/213931807-993be051-59e4-4102-b183-8c65bacaadee.png)
 
-- In `term-world`, find the `Source Control` menu
+- In [`term-world`](https://world.theterm.world), find the `Source Control` menu
 - Locate and click the `...` at the top right of the window
 - Choose `Clone` from the list of options
 - Paste the link copied above
@@ -88,7 +86,7 @@ The process has two (2) major parts.
 
 Just like last week, the content for this week (and most every week to follow) is outfitted with a `grader` program that can be used to evaluate your work for the week.
 
-Again, in order to run the `grader` for this week's work, you'll need to be in the topmost level of the `garage` folder (the same place you needed to be in order to successfully run the `git pull` command).
+Again, in order to run the `grader` for this week's work, you will need to be in the topmost level of the `garage` folder (the same place you needed to be in order to successfully run the `git pull` command).
 
 Once there, run the command:
 
