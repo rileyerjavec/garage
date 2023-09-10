@@ -21,10 +21,10 @@ def main():
             code=cliarg.keycode
         )
     except:
-        n.path.change(2.0)
+        n.path.change({"act": 2, "scene": 0})
     
     if not result:
-        n.path.change(1.0)
+        n.path.change({"act": 1, "scene": 0})
 
     n.narrate()
 
