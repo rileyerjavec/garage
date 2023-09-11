@@ -38,6 +38,9 @@ In this set of activities we cover:
 * first steps toward reading and working with a Python program
 * continued practice operating and acting within a programming environment
 
+## Creating an Assignment Repository
+Click on the [garage assignment link](https://classroom.github.com/a/ZZj3Muwy) and accept the assignment to see a repository, called house, created with your GitHub username at the end of its name.
+
 ### `KeypadCracker.py`
 
 This device, the `KeypadCracker.py` has two (2) parts to it which create the first two (2) and last two (2) digits to our garage code. This means that the garage code as four (4) digits. Correctly computing the digits will allow you into your garage. Instructions for how to correctly arrive at this number are in the file itself.
@@ -116,6 +119,17 @@ Once these have been "staged," attach a message to what we call a commit -- a "p
 To follow this process:
 
 ![TW - Commit and Sync](https://user-images.githubusercontent.com/1552764/213940290-23b12a8a-6283-492c-ab1c-66a801ba815e.png)
+
+## Code Walkthrough
+
+Code walkthrough is a type of peer review where the writer of the code leads the process. The goal of code walkthrough is to create a shared understanding of created code, to detect any potential flaws in the code and to correct them. 
+
+During the lab session, each author will engage in the code walkthrough with TLs and the instructor by:
+- opening the Python files in which they wrote code and explaining the code;
+- executing Python programs to showcase the behavior of the written code;
+- write comments in the code to explain the written lines of code.
+
+During the walkthrough, TLs and the instructor will ask pertinent questions about the code.
 
 ## `term-world` Server Backup Policy
 
