@@ -15,20 +15,29 @@ class RoboVac(FixtureSpec):
     def battery_usage(self, room_x: int = 0, room_y: int = 0) -> int:
         """Calculate battery usage using room_x, room_y"""
         ###################################################
-        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
-        sqft = room_x * room_y
-        drain = (sqft * 5) // 60
-        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
+        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
+
+        # TODO: Calculate square footage of the room
+
+        # TODO: Calculate the battery drain using a variable identifier
+        #       with the name of "drain" 
+
+        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
         return drain
 
     def sense_room(self) -> (int, int):
         """Get measurements of the room from input prompts"""
         ###################################################
-        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
-        room_x = int(input("Enter room width: "))
-        room_y = int(input("Enter room length: "))
-        ## WORK HERE - MATCH INDENTATION LEVEL OF THIS COMMENT
+        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
+
+        # TODO: Take user input of room width using variable idenitifer
+        #       "room_x"
+
+        # TODO: Take user input of room length using variable idenitifer
+        #       "room_y"
+
+        ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
         return room_x, room_y
 
@@ -59,7 +68,7 @@ def main():
     # Check if room still contains junk, tell
     # that branch of the story
     if glob("*.junk"):
-        n.path.change(2)
+        n.path.change({"act": 2, "scene": 0})
         n.narrate()
   
     # Ask if user wants to turn the Groomba on

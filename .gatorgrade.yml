@@ -10,10 +10,12 @@
 # ITEMS <-- TODO: write flags for object locations
 - description: The Groomba cleaned up the garage and removed all .junk files
   category: Reclaiming the garage
-  check: CountCommandOutput
+  check: MatchCommandFragment
   options:
-    count: 0
-    command: $(ls -l workshop | grep ".junk")
+    exact: true
+    count: 1
+    fragment: "0"
+    command: ls -l workshop | grep ".junk" | wc -l
 - description: The Groomba functions, even if not cleaning the room
   category: RoboVac Repair
   check: ExecuteCommand
@@ -45,30 +47,30 @@
 - KeypadCracker.py:
   - description: KeypadCracker.py performs multiplication
     category: Code Crackin'
-    check: MatchFileFragment
+    check: MatchFileRegex
     options:
-      fragment: " * "
+      regex: '(\s)?\*(\s)?|(\s)?\*\=(\s)?'
       count: 1
 - KeypadCracker.py:
   - description: KeypadCracker.py performs subtraction
     category: Code Crackin'
-    check: MatchFileFragment
+    check: MatchFileRegex
     options:
-      fragment: " - "
+      regex: '(\s)?\-(\s)?|(\s)?\-\=(\s)?'
       count: 1
 - KeypadCracker.py:
   - description: KeypadCracker.py performs addition
     category: Code Crackin'
-    check: MatchFileFragment
+    check: MatchFileRegex
     options:
-      fragment: " + "
+      regex: '(\s)?\+(\s)?|(\s)?\+\=(\s)?'
       count: 1
 - KeypadCracker.py:
   - description: KeypadCracker.py performs division
     category: Code Crackin'
     check: MatchFileRegex
     options:
-      regex: '\s\/(\/)?\s'
+      regex: '(\s)?\/(\/)?(\s)?|(\s)\/(\/)?\=(\s)?'
       count: 1
 - workshop/RoboVac.py:
   - description: No TODO markers in RoboVac.py
@@ -90,12 +92,12 @@
     category: RoboVac Repair
     check: MatchFileFragment
     options:
-      fragment: " * "
+      fragment: '(\s)?\*(\s)?|(\s)?\*\=(\s)?'
       count: 1
 - workshop/RoboVac.py:
   - description: RoboVac.py performs division
     category: RoboVac Repair
     check: MatchFileRegex
     options:
-      regex: '\s\/(\/)?\s'
+      regex: '(\s)?\/(\/)?(\s)?|(\s)\/(\/)?\=(\s)?'
       count: 1
