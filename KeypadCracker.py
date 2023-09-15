@@ -18,25 +18,25 @@ class KeypadCracker(FixtureSpec):
 
         ###################################################
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
-        # TODO: Prompt user to enter a number (1-12) from the keyboard
+        # Prompt user to enter a number (1-12) from the keyboard
+        birth_month_number = int(input("Enter a number 1-12:"))
+        # Convert birth_month to integer; store as birth_month_number
         
-        # TODO: Convert birth_month to integer; store as birth_month_number
-
-        # TODO: Create separate variable to keep track of alterations to 
+        # Create separate variable to keep track of alterations to 
         #       birth_month_number -- we need the original for the final
         #       calculation!
-
-        # TODO: Multiply our running_number by 3
-
-        # TODO: Add 6 to our running_number
-
-        # TODO: Divide running_number by 3
-
-        # TODO: Substract birth_month_number FROM running_number, store
+        running_number = birth_month_number 
+        # Multiply our running_number by 3
+        running_number *= 3
+        # Add 6 to our running_number
+        running_number += 6
+        # Divide running_number by 3
+        running_number /= 3
+        # Substract birth_month_number FROM running_number, store
         #       as a separate variable to input into the keypad
-
+        first_digit = running_number - birth_month_number
         # TODO: To derive the second digit, subtract 1 from the first digit
-        
+        second_digit = first_digit - 1
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
 
@@ -46,31 +46,31 @@ class KeypadCracker(FixtureSpec):
 
         ###################################################
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
-        # TODO: Prompt user to enter a number (1-31) from the keyboard
-    
-        # TODO: Convert birthday to integer; store as birth_day_number
+        # Prompt user to enter a number (1-31) from the keyboard
+        birth_day_number = int(input("Enter a number 1-31:"))
+        # Convert birthday to integer; store as birth_day_number
 
-        # TODO: Create separate variable to keep track of alterations to 
+        # Create separate variable to keep track of alterations to 
         #       birth_day_number -- we need the original for the final
         #       calculation!
-
-        # TODO: Add 1 to running_number
-
-        # TODO: Mulitiply running_number by 2 (doubling it)
-
-        # TODO: Add 4 to running_number
-
-        # TODO: Divide running_number by 2
-
-        # TODO: Subtract birth_day_number from running_number
-
-        # TODO: Set aside the current value of running_number as the
+        running_number = birth_day_number
+        # Add 1 to running_number
+        running_number += 1
+        # Mulitiply running_number by 2 (doubling it)
+        running_number *= 2
+        # Add 4 to running_number
+        running_number += 4
+        # Divide running_number by 2
+        running_number /= 2
+        # Subtract birth_day_number from running_number
+        third_digit = running_number - birth_day_number
+        # Set aside the current value of running_number as the
         #       third_digit of the code
-
-        # TODO: Multiply running_number by 2 (double it)
-
-        # TODO: Add 3 to running_number
-
+        running_number = third_digit
+        # Multiply running_number by 2 (double it)
+        running_number *= 2
+        # Add 3 to running_number
+        running_number += 3
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
 

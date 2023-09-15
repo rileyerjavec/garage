@@ -17,11 +17,11 @@ class RoboVac(FixtureSpec):
         ###################################################
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
 
-        # TODO: Calculate square footage of the room
-
-        # TODO: Calculate the battery drain using a variable identifier
+        # Calculate square footage of the room
+        square_footage = room_x * room_y
+        # Calculate the battery drain using a variable identifier
         #       with the name of "drain" 
-
+        drain = (square_footage * 5) // 60
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
         return drain
@@ -31,12 +31,12 @@ class RoboVac(FixtureSpec):
         ###################################################
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
 
-        # TODO: Take user input of room width using variable idenitifer
+        # Take user input of room width using variable idenitifer
         #       "room_x"
-
-        # TODO: Take user input of room length using variable idenitifer
+        room_x = int(input("enter room width"))
+        #  Take user input of room length using variable idenitifer
         #       "room_y"
-
+        room_y = int(input("enter room length"))
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
         return room_x, room_y
