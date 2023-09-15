@@ -35,7 +35,7 @@ class KeypadCracker(FixtureSpec):
         # Substract birth_month_number FROM running_number, store
         #       as a separate variable to input into the keypad
         first_digit = running_number - birth_month_number
-        # TODO: To derive the second digit, subtract 1 from the first digit
+        # To derive the second digit, subtract 1 from the first digit
         second_digit = first_digit - 1
         ## WORK HERE -- MATCH INDENTATION LEVEL OF THIS COMMENT
         ###################################################
