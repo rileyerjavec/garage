@@ -25,13 +25,13 @@ class KeypadCracker(FixtureSpec):
         # Create separate variable to keep track of alterations to 
         #       birth_month_number -- we need the original for the final
         #       calculation!
-        running_number = birth_month_number 
+        running_number = birth_month_number
         # Multiply our running_number by 3
         running_number *= 3
         # Add 6 to our running_number
         running_number += 6
         # Divide running_number by 3
-        running_number /= 3
+        running_number //= 3
         # Substract birth_month_number FROM running_number, store
         #       as a separate variable to input into the keypad
         first_digit = running_number - birth_month_number
@@ -61,7 +61,7 @@ class KeypadCracker(FixtureSpec):
         # Add 4 to running_number
         running_number += 4
         # Divide running_number by 2
-        running_number /= 2
+        running_number //= 2
         # Subtract birth_day_number from running_number
         third_digit = running_number - birth_day_number
         # Set aside the current value of running_number as the
